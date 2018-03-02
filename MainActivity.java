@@ -1,5 +1,7 @@
 package com.example.steven.comcoronetcrownethical;
 
+import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -83,7 +85,9 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.iHome) {
             Toast.makeText(getApplicationContext(),"Home",Toast.LENGTH_SHORT).show();
         } else if (id == R.id.iMaster) {
-            Toast.makeText(getApplicationContext(),"Berikut Data Master",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this,MasterDistributor_Create.class);
+            startActivity(intent);
+//            Toast.makeText(getApplicationContext(),"Berikut Data Master",Toast.LENGTH_SHORT).show();
         } else if (id == R.id.iTransaksi) {
             Toast.makeText(getApplicationContext(),"Berikut Data Transaksi",Toast.LENGTH_SHORT).show();
         } else if (id == R.id.iDana) {
